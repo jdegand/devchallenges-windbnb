@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/devchallenges-windbnb/static/css/main.7c31c185.css",
+    "main.js": "/devchallenges-windbnb/static/js/main.d04bba0a.js",
+    "static/js/787.86bb533f.chunk.js": "/devchallenges-windbnb/static/js/787.86bb533f.chunk.js",
+    "static/media/logo.svg": "/devchallenges-windbnb/static/media/logo.beef9462a899fe60cb52edfd446e26ef.svg",
+    "static/media/web.svg": "/devchallenges-windbnb/static/media/web.a74e54020db22a06756b6256e64a9823.svg",
+    "index.html": "/devchallenges-windbnb/index.html",
+    "static/media/map-marker.svg": "/devchallenges-windbnb/static/media/map-marker.df450ed22a0ce38b57ba28eff3f12fd7.svg",
+    "main.7c31c185.css.map": "/devchallenges-windbnb/static/css/main.7c31c185.css.map",
+    "main.d04bba0a.js.map": "/devchallenges-windbnb/static/js/main.d04bba0a.js.map",
+    "787.86bb533f.chunk.js.map": "/devchallenges-windbnb/static/js/787.86bb533f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c31c185.css",
+    "static/js/main.d04bba0a.js"
+  ]
+}
