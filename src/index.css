@@ -37,6 +37,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  padding: 0 20px;
 }
 
 a:not([class]) {
@@ -73,8 +74,4 @@ select {
 
 button {
   cursor: pointer;
-}
-
-body {
-  padding: 0 20px;
 }
