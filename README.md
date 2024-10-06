@@ -1,7 +1,7 @@
-<h1 align="center">Devchallenges Windbnb</h1>
+<h1 align="center">DevChallenges Windbnb</h1>
 
 <div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">DevChallenges.io</a>.
 </div>
 
 <div align="center">
@@ -10,7 +10,7 @@
       Live Link
     </a>
     <span> | </span>
-    <a href="https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD">
+    <a href="https://web.archive.org/web/20240417023514/https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD">
       Challenge
     </a>
   </h3>
@@ -21,17 +21,37 @@
 - [Overview](#overview)
   - [Built With](#built-with)
 - [Features](#features)
+- [Thoughts](#thoughts)
 - [Useful Resources](#useful-resources)
 
 ## Overview
 
-![](devchallenges-windbnb-mobile.png)
+![Mobile](devchallenges-windbnb-mobile.png)
 
-![](devchallenges-windbnb-mobile-locations.png)
+***
 
-![](devchallenges-windbnb-mobile-guests.png)
+![Mobile Locations](devchallenges-windbnb-mobile-locations.png)
 
-![](devchallenges-windbnb-desktop.png)
+***
+
+![Mobile Guests](devchallenges-windbnb-mobile-guests.png)
+
+***
+
+![Desktop](devchallenges-windbnb-desktop.png)
+
+***
+
+### Built With
+
+- [React](https://reactjs.org/)
+- [Material Design Icons](https://materialdesignicons.com/)
+
+## Features
+
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://web.archive.org/web/20240417023514/https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD) was to build an application to complete the given user stories. **Note**: The previous design document may be incomplete, as you need to find an archived version of the challenge as all `legacy` challenges have had their documentation removed from DevChallenges.
+
+## Thoughts
 
 This was a weird one. The search bar is really a modal in disguise.  In the original design, it seems like you are supposed to be able to click anywhere on the input and the modal animates from the top of the screen.  The modal contains all the real functionality. 
 
@@ -41,20 +61,11 @@ I tried to implement more of the real airbnb design search bar.
 
 Since I used focus to render the location suggestions panel, you can't tab focus them even though the links are buttons.  The minuses and pluses can be tab focused on the guest panel but you can't click them with your keyboard.
 
-Using svgs representing + & - inside the buttons prevents clicks from registering. 
+Using svgs representing `+` & `-` inside the buttons prevents clicks from registering. 
 
 When hiding content with event listeners, onClick is too slow and you are better off using onMouseDown instead. See [Stack Overflow](https://stackoverflow.com/questions/69632325/element-click-doesnt-fire-when-the-element-gets-hidden).
 
-The images linked in the json are not [small](https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80) and can cause hitching when scrolling. I lowered the image dimensions since the images are only 400px.  
-
-### Built With
-
-- [React](https://reactjs.org/)
-- [Material Design Icons](https://materialdesignicons.com/)
-
-## Features
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD) was to build an application to complete the given user stories.
+The images linked in the JSON are not [small](https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80) and can cause hitching when scrolling. I lowered the image dimensions since the images are only 400px.
 
 ## Useful Resources
 

@@ -14,7 +14,7 @@
   margin-inline-start: 5px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   nav {
     display: flex;
     flex-direction: column;

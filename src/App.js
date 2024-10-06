@@ -4,7 +4,7 @@ import Input from './components/Input/Input';
 import Stays from './components/Stays/Stays';
 import logo from "./logo.svg";
 import globe from "./web.svg";
-import data  from './stays.json';
+import data from './stays.json';
 
 function App() {
 
@@ -14,14 +14,13 @@ function App() {
     children: 0,
   });
 
-  //const [stays, setStays] = useState(data);
   const [filteredStays, setFilteredStays] = useState(data);
 
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = (e) => {
-      e.preventDefault()
-      setToggle(prev => !prev)
+    e.preventDefault()
+    setToggle(prev => !prev)
   }
 
   const handleLocationChange = (e) => {
@@ -33,29 +32,29 @@ function App() {
   }
 
   const handleGuestCount = (e) => {
-    if(e.target.name === 'adult-subtract' && guestCount.adult > 0){
-        setGuestCount(prev => {
-          let newObj = Object.assign({}, guestCount); 
-          newObj.adult = guestCount.adult - 1;
-          return newObj     
-        })
-    } else if (e.target.name === 'adult-plus' && guestCount.adult < 20){
+    if (e.target.name === 'adult-subtract' && guestCount.adult > 0) {
       setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount); 
+        let newObj = Object.assign({}, guestCount);
+        newObj.adult = guestCount.adult - 1;
+        return newObj
+      })
+    } else if (e.target.name === 'adult-plus' && guestCount.adult < 20) {
+      setGuestCount(prev => {
+        let newObj = Object.assign({}, guestCount);
         newObj.adult = guestCount.adult + 1;
-        return newObj     
+        return newObj
       })
-    } else if(e.target.name === 'children-subtract' && guestCount.children > 0){
+    } else if (e.target.name === 'children-subtract' && guestCount.children > 0) {
       setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount); 
+        let newObj = Object.assign({}, guestCount);
         newObj.children = guestCount.children - 1;
-        return newObj     
+        return newObj
       })
-    } else if (e.target.name === 'children-plus' && guestCount.children < 20){
+    } else if (e.target.name === 'children-plus' && guestCount.children < 20) {
       setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount); 
+        let newObj = Object.assign({}, guestCount);
         newObj.children = guestCount.children + 1;
-        return newObj     
+        return newObj
       })
     }
   }
@@ -67,28 +66,11 @@ function App() {
   }
 
   const filterStays = () => {
-     return data.filter(stay => parseInt(guestCount.adult)+ parseInt(guestCount.children) <= stay.maxGuests ?
-              `${stay.city}, ${stay.country}` === locationText
-            : null
-        )  
-  }
-
-/*
-  const filterStays = () => {
-     return stays.filter(stay => {
-            if(parseInt(guestCount.adult)+ parseInt(guestCount.children) <= stay.maxGuests){
-                return `${stay.city}, ${stay.country}` === locationText
-            }
-        }
+    return data.filter(stay => parseInt(guestCount.adult) + parseInt(guestCount.children) <= stay.maxGuests ?
+      `${stay.city}, ${stay.country}` === locationText
+      : null
     )
-}
-*/
-
-/*
-useEffect(()=> {
-  setFilteredStays(data) // so you get all stays on first load  - initial state?
-}, [])
-*/
+  }
 
   return (
     <div className="App">
@@ -97,18 +79,18 @@ useEffect(()=> {
           <img src={logo} alt="Windbnb" />
         </div>
         <Input
-         handleSuggestion={handleSuggestion} 
-         locationText={locationText} 
-         handleLocationChange={handleLocationChange} 
-         handleGuestCount={handleGuestCount}
-         guestCount={guestCount}
-         handleSubmit={handleSubmit}
-         toggle={toggle}
-         handleToggle={handleToggle}
-         />
+          handleSuggestion={handleSuggestion}
+          locationText={locationText}
+          handleLocationChange={handleLocationChange}
+          handleGuestCount={handleGuestCount}
+          guestCount={guestCount}
+          handleSubmit={handleSubmit}
+          toggle={toggle}
+          handleToggle={handleToggle}
+        />
         <div className="flex align-center between mobile-none">
           <div>
-            Become a Host 
+            Become a Host
           </div>
           <div className="margin-start-5">
             <img src={globe} alt="" />
@@ -116,8 +98,8 @@ useEffect(()=> {
         </div>
       </nav>
       <main>
-        <Stays 
-        filteredStays={filteredStays}
+        <Stays
+          filteredStays={filteredStays}
         />
       </main>
     </div>
