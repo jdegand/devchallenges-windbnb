@@ -41,7 +41,3 @@ function Stays({ filteredStays }) {
 }
 
 export default Stays;
-
-/*
- {stay.type.includes('Entire') ? null : <p>{stay.beds} beds</p> }
-*/
