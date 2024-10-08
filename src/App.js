@@ -33,29 +33,25 @@ function App() {
 
   const handleGuestCount = (e) => {
     if (e.target.name === 'adult-subtract' && guestCount.adult > 0) {
-      setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount);
-        newObj.adult = guestCount.adult - 1;
-        return newObj
-      })
+      setGuestCount(prev => ({
+        ...prev,
+        adult: guestCount.adult - 1
+      }))
     } else if (e.target.name === 'adult-plus' && guestCount.adult < 20) {
-      setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount);
-        newObj.adult = guestCount.adult + 1;
-        return newObj
-      })
+      setGuestCount(prev => ({
+        ...prev,
+        adult: guestCount.adult + 1
+      }))
     } else if (e.target.name === 'children-subtract' && guestCount.children > 0) {
-      setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount);
-        newObj.children = guestCount.children - 1;
-        return newObj
-      })
+      setGuestCount(prev => ({
+        ...prev,
+        children: guestCount.children - 1
+      }))
     } else if (e.target.name === 'children-plus' && guestCount.children < 20) {
-      setGuestCount(prev => {
-        let newObj = Object.assign({}, guestCount);
-        newObj.children = guestCount.children + 1;
-        return newObj
-      })
+      setGuestCount(prev => ({
+        ...prev,
+        children: guestCount.children + 1
+      }))
     }
   }
 
