@@ -26,19 +26,19 @@
 
 ## Overview
 
-![Mobile](devchallenges-windbnb-mobile.png)
+![Mobile](screenshots/devchallenges-windbnb-mobile.png)
 
 ***
 
-![Mobile Locations](devchallenges-windbnb-mobile-locations.png)
+![Mobile Locations](screenshots/devchallenges-windbnb-mobile-locations.png)
 
 ***
 
-![Mobile Guests](devchallenges-windbnb-mobile-guests.png)
+![Mobile Guests](screenshots/devchallenges-windbnb-mobile-guests.png)
 
 ***
 
-![Desktop](devchallenges-windbnb-desktop.png)
+![Desktop](screenshots/devchallenges-windbnb-desktop.png)
 
 ***
 
